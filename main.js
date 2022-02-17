@@ -1,19 +1,17 @@
 "use strict";
 
-let int1 = 0;
-let int2 = 0;
+let test = null;
 
 // int1とint2を足し算する関数
-const sum_int = () => {
-    console.log(int1 + int2);
+const sum_int = (str) => {
+    console.log(str);
 }
 
 // int1とint2に値をセットする関数
-const set_int = (a, b, callback) => {
+const set_int = (callback) => {
     setTimeout(function(){
-        int1 = a;
-        int2 = b;
-        callback();
+        test = "after 1 sec";
+        callback(test);
     }, 1000);
 }
 
